@@ -1,0 +1,30 @@
+.navbar-title {
+  color: red;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: black !important;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+  color: darkred !important;
+}
+
+.rounded-circle {
+  object-fit: cover;
+}
+
+/* Kullanıcı adı (sağ üst) - açık kırmızı */
+.text-user {
+  color: #e63946;
+  font-weight: 600;
+  font-size: 1.05rem;
+}

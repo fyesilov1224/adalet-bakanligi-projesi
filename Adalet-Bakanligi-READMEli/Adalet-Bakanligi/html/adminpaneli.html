@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Paneli</title>
+  <link rel="stylesheet" href="../css/adminpaneli.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Admin Paneli</h2>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Resim</th>
+          <th>Ad Soyad</th>
+          <th>Sicil</th>
+          <th>Başvuru Tarihi</th>
+          <th>Bulunduğu İl</th>
+          <th>Bulunduğu İlçe</th>
+          <th>Başvuru İl</th>
+          <th>Başvuru İlçe</th>
+          <th>Unvan</th>
+          <th>Hizmet Süresi</th>
+          <th>Kadro</th>
+          <th>Açıklama</th>
+          <th>Dilekçe</th>
+          <th>İşlemler</th>
+        </tr>
+      </thead>
+      <tbody id="adminTableBody">
+        <tr>
+          <td><img src="../js/" /></td>
+          <td>Fırat Yeşilova</td>
+          <td>123456</td>
+          <td>2025-05-30</td>
+          <td>Çankırı</td>
+          <td>Merkez</td>
+          <td>Ankara</td>
+          <td>Çankaya</td>
+          <td>Zabıt Katibi</td>
+          <td>8 yıl</td>
+          <td>9/1</td>
+          <td><span style="color:red; cursor:pointer;" onclick="gosterAciklama('Ailevi nedenlerden dolayı Ankara\'ya tayin talep ediyorum.')">Açıklama...</span></td>
+          <td><a href="#" style="color:red;" onclick="gosterDilekce()">Dilekçe</a></td>
+          <td>
+            <select>
+              <option>Red Sebebi Seçin</option>
+              <option>Eksik Evrak</option>
+              <option>Uygun Görülmedi</option>
+            </select><br/>
+            <button class="btn-red">Reddet</button>
+            <button class="btn-yellow">Beklemede</button>
+            <button class="btn-green">Onayla</button>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/30" /></td>
+          <td>Ayşe Demir</td>
+          <td>789456</td>
+          <td>2025-05-28</td>
+          <td>İstanbul</td>
+          <td>Üsküdar</td>
+          <td>Ankara</td>
+          <td>Keçiören</td>
+          <td>Mübaşir</td>
+          <td>6 yıl</td>
+          <td>10/2</td>
+          <td><span style="color:red; cursor:pointer;" onclick="gosterAciklama('Eş durumu nedeniyle Ankara\'ya geçiş yapmak istiyorum.')">Açıklama...</span></td>
+          <td><a href="#" style="color:red;" onclick="gosterDilekce()">Dilekçe</a></td>
+          <td>
+            <select>
+              <option>Red Sebebi Seçin</option>
+              <option>Eksik Evrak</option>
+              <option>Uygun Görülmedi</option>
+            </select><br/>
+            <button class="btn-red">Reddet</button>
+            <button class="btn-yellow">Beklemede</button>
+            <button class="btn-green">Onayla</button>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/30" /></td>
+          <td>Mehmet Kaya</td>
+          <td>654321</td>
+          <td>2025-05-29</td>
+          <td>İzmir</td>
+          <td>Konak</td>
+          <td>Ankara</td>
+          <td>Yenimahalle</td>
+          <td>Yazı İşleri Müdürü</td>
+          <td>12 yıl</td>
+          <td>7/1</td>
+          <td><span style="color:red; cursor:pointer;" onclick="gosterAciklama('Çocuğumun eğitimi için tayin talep ediyorum.')">Açıklama...</span></td>
+          <td><a href="#" style="color:red;" onclick="gosterDilekce()">Dilekçe</a></td>
+          <td>
+            <select>
+              <option>Red Sebebi Seçin</option>
+              <option>Eksik Evrak</option>
+              <option>Uygun Görülmedi</option>
+            </select><br/>
+            <button class="btn-red">Reddet</button>
+            <button class="btn-yellow">Beklemede</button>
+            <button class="btn-green">Onayla</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Açıklama Modalı -->
+  <div class="modal" id="aciklamaModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="kapatModal()">&times;</span>
+      <p id="aciklamaIcerik"></p>
+    </div>
+  </div>
+
+  <!-- Dilekçe Modalı -->
+  <div class="modal" id="dilekceModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="kapatDilekce()">&times;</span>
+      <p>Dilekçe ve ekleri:</p>
+      <ul>
+        <li><a href="../dosyalar/ornek_dilekce.pdf" target="_blank" style="color:red;">Dilekçe PDF</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="../js/adminpaneli.js"></script>
+</body>
+</html>
