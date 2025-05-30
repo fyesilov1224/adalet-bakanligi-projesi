@@ -1,0 +1,1 @@
+# adalet-bakanligi-projesi
