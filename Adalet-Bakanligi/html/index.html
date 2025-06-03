@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adalet Bakanlığı Giriş</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative">
+    
+    <div class="text-center mb-4">
+      <img src="../css/logo.png" alt="Adalet Bakanlığı Logosu" class="logo mb-3" />
+      <h3 class="fw-bold text-danger">T.C. ADALET BAKANLIĞI</h3>
+    </div>
+
+    <div class="card shadow p-4 rounded-4 form-box">
+      <form id="loginForm">
+        <div class="mb-3 input-group">
+          <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-user text-danger"></i></span>
+          <input type="text" class="form-control rounded-start-0" id="username" placeholder="Kullanıcı Adı" required />
+        </div>
+
+        <div class="mb-3 input-group">
+          <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-lock text-danger"></i></span>
+          <input type="password" class="form-control rounded-start-0" id="password" placeholder="Şifre" required />
+        </div>
+
+        <div class="d-grid mb-3">
+          <button type="submit" class="btn btn-danger rounded-pill">Giriş Yap</button>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <a href="#" class="text-black text-decoration-none" onclick="showForgotPassword()"><i class="fa-solid fa-key me-1 text-danger"></i>Şifremi Unuttum</a>
+          <a href="uyeol.html" class="text-black text-decoration-none"><i class="fa-solid fa-user-plus me-1 text-danger"></i>Üye Ol</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Şifremi Unuttum Kutusu -->
+    <div id="forgotPasswordBox" class="forgot-box card shadow p-4 rounded-4 text-center d-none">
+      <button class="btn-close position-absolute top-0 end-0 m-3" onclick="hideForgotPassword()"></button>
+      <h5 class="mb-3 text-danger">Şifremi Unuttum</h5>
+      <input type="email" id="resetEmail" class="form-control mb-3" placeholder="Mail adresinizi giriniz" />
+      <button class="btn btn-danger" onclick="sendReset()">Gönder</button>
+    </div>
+
+    <!-- Arka Planı Karart -->
+    <div id="overlay" class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-none"></div>
+
+    <!-- Başarı Mesajı -->
+    <div id="successMessage" class="position-absolute top-50 start-50 translate-middle text-white bg-success rounded-3 px-4 py-3 d-none shadow">
+      <i class="fa-solid fa-circle-check me-2 text-info"></i>Yeni şifreniz mail adresinize gönderilmiştir.
+    </div>
+  </div>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>
